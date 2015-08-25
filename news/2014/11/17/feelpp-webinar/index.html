@@ -1,0 +1,614 @@
+<!-- -*- mode: html -*- -->
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Anisotropic mesh adaptation and stabilized finite elements method for solving conjugate heat transfers and turbulent flows</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="Feel++">
+  <link rel="alternate" type="application/rss+xml" title="Feel++ • Finite Element Embedded Library in C++ - Feed" href="/feed.xml">
+  <link rel="alternate" type="application/atom+xml" title="Recent commits to Feel's master branch" href="https://github.com/feelpp/feelpp/commits/master.atom">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
+  <link rel="stylesheet" href="/css/screen.css">
+  <link rel="stylesheet" href="/css/toc.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script type="text/javascript" charset="utf-8">
+var anchorForId = function(id){
+
+  var anchor = document.createElement("a");
+  anchor.className = "header-link";
+  anchor.href      = "#" + id;
+  anchor.innerHTML = '<i class="fa fa-link"></i>';
+  return anchor;
+}
+var linkifyAnchors = function(level, containingElement) {
+
+  var headers = containingElement.getElementsByTagName("h"+level);
+  for(var h=0; h<headers.length; h++){
+    var header = headers[h];
+
+    if( typeof(header.id) !== "undefined" && header.id !== "" )
+      header.appendChild(anchorForId(header.id));
+  }
+};
+document.onreadystatechange = function(){
+  if(this.readyState === "complete"){
+    var contentBlock = document.getElementsByClassName("docs")[0] || document.getElementsByClassName("news")[0]
+    for(var level=1; level<=6; level++)
+      linkifyAnchors(level, contentBlock);
+  }
+}
+</script>
+
+  <!--[if lt IE 9]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "TeX/autobold.js", "TeX/feelppmacros.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    });
+  </script><script src="http://vivabrain.u-strasbg.fr/mathjax/latest/MathJax.js"></script>
+
+</head>
+
+
+<body class="wrap">
+  <!-- header.html -->
+<header>
+  <nav class="mobile-nav show-on-mobiles">
+    <ul>
+  <li class="">
+    <a href="/">Home</a>
+  </li>
+  <li class="">
+    <a href="https://github.com/feelpp/feelpp/releases">Download</a>
+  </li>
+  <li>
+    <a href="http://book.feelpp.org">User docs<!--<span class="show-on-mobiles">s</span><span class="hide-on-mobiles">umentation</span> --> </a> 
+  </li>
+  <li>
+    <a href="http://doc.feelpp.org">Dev docs</a>
+  </li>
+  <li class="">
+    <a href="/members/">Members</a>
+  </li>
+  <li class="current">
+    <a href="/news/">News</a>
+  </li>
+  <li class="">
+    <a href="/publications//">Publications</a>
+  </li>
+  <li class="">
+    <a href="/community/">Community</a>
+  </li>
+  <li>
+    <a href="https://github.com/feelpp/feelpp">GitHub</a>
+  </li>
+</ul>
+
+  </nav>
+  <div class="grid">
+    <div class="unit two-thirds center-on-mobiles">
+    <p></p>
+    </div>
+    <div class="unit one-third  center-on-mobiles">
+    <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53700aec4f7aed98"></script>
+<!-- AddThis Button END -->
+</div>
+</div>
+<div class="grid">
+</div>
+    <!-- <div class="unit one-third center-on-mobiles"> -->
+    <!--   <h1> -->
+    <!--     <a href="/"> -->
+    <!--       <span>Feel++</span> -->
+    <!--       <\!--<img src="/images/feel.gif" width="249" height="115" alt="Logo">-\-> -->
+    <!--       <img src="/images/feel.gif" height="125" alt="Logo"> -->
+    <!--     </a> -->
+    <!--   </h1> -->
+    <!-- </div> -->
+    <nav class="main-nav unit whole hide-on-mobiles">
+      <ul>
+  <li class="">
+    <a href="/">Home</a>
+  </li>
+  <li class="">
+    <a href="https://github.com/feelpp/feelpp/releases">Download</a>
+  </li>
+  <li>
+    <a href="http://book.feelpp.org">User docs<!--<span class="show-on-mobiles">s</span><span class="hide-on-mobiles">umentation</span> --> </a> 
+  </li>
+  <li>
+    <a href="http://doc.feelpp.org">Dev docs</a>
+  </li>
+  <li class="">
+    <a href="/members/">Members</a>
+  </li>
+  <li class="current">
+    <a href="/news/">News</a>
+  </li>
+  <li class="">
+    <a href="/publications//">Publications</a>
+  </li>
+  <li class="">
+    <a href="/community/">Community</a>
+  </li>
+  <li>
+    <a href="https://github.com/feelpp/feelpp">GitHub</a>
+  </li>
+</ul>
+
+    </nav>
+  </div>
+</header>
+
+
+    <section class="news">
+    <div class="grid">
+
+      <div class="docs-nav-mobile unit whole show-on-mobiles">
+  <select onchange="if (this.value) window.location.href=this.value">
+    <option value="">Navigate the blog…</option>
+    <option value="/news/">Home</option>
+    <optgroup label="v1.x">
+      
+      <option value="/news/2015/08/17/tomographie-optique/">Détection de tumeurs par Tomographie Optique Diffuse</option>
+      
+      <option value="/news/2015/08/17/rheologie-sanguine/"></option>
+      
+      <option value="/news/2015/08/17/planification-procedures-medicales/"></option>
+      
+      <option value="/news/2015/08/17/ns2++/">Non Standard Navier-Stokes formulation in Feel++</option>
+      
+      <option value="/news/2015/08/17/mhd/">Résolution des équations de la MHD sur architecture multicoeur</option>
+      
+      <option value="/news/2015/08/17/maxwell/">Couplage équations de Maxwell / Méthode particulaire sur GPU</option>
+      
+      <option value="/news/2015/08/17/holo3/">Corrélation d’images et X-FEM (eXtended Finite Element Method)</option>
+      
+      <option value="/news/2015/08/17/hifimagnet/">Modélisation multi physique d'aimants à haut champ</option>
+      
+      <option value="/news/2015/08/17/gazomat/"></option>
+      
+      <option value="/news/2015/08/17/fusion/">Collaboration Équipe Projet INRIA/TONUS, CEA</option>
+      
+      <option value="/news/2015/08/17/ecoulements-sanguins/">De l'IRM réelle à l'IRM virtuelle : modéliser les flux sanguins dans le cerveau humain</option>
+      
+      <option value="/news/2015/08/17/chorus/">Méthodes de Réduction d'Ordre en Aérothermie: Application aux systèmes d'air conditionné de cabine d'avion</option>
+      
+      <option value="/news/2015/08/17/cartographie/"></option>
+      
+      <option value="/news/2015/07/22/site-update/">Mise à jour du site, quelques nouveautés</option>
+      
+      <option value="/news/2015/07/17/creation-website/">Un site web moderne et attractif pour CSMI</option>
+      
+      <option value="/news/2015/07/11/soutenances-de-stages/">Soutenances de stage de M1 et M2</option>
+      
+      <option value="/news/2015/06/12/300000/">300 000 hours</option>
+      
+      <option value="/news/2015/06/11/attribution-heures-calcul/">Attribution d'heures de calcul</option>
+      
+      <option value="/news/2015/06/08/jdevs-2015-visualisation-in-situ/">Présentation aux JDEVs 2015 sur la Visualisation In-Situ</option>
+      
+      <option value="/news/2015/06/08/19e-recontre-math-industrie-HPC-saclay/">19e Rencontre Math Industrie autour du HPC, à Saclay</option>
+      
+      <option value="/news/2015/06/03/etude-socio-economique/">Etude sur l’impact socio-économique des mathématiques</option>
+      
+      <option value="/news/2015/04/04/10eme-appel-6million-hours-hp-feelpp/">Le 10eme appel Prace décerne 6 Millions d'heures coeurs pour le projet HP-Feel++</option>
+      
+      <option value="/news/2015/03/17/4eme-journees-utilisateurs-feelpp/">4ème Journées des Utilisateurs de Feel++ (Feel++ Users' Days)</option>
+      
+      <option value="/news/2015/03/10/prace/">Hp-Feel++ selected by Prace 10th call</option>
+      
+      <option value="/news/2015/03/05/fud-4/">4th Feel++ User Days</option>
+      
+      <option value="/news/2014/12/17/nouveau-numero-newsletter-ECMI/">Nouveau numéro de la newsletter ECMI</option>
+      
+      <option value="/news/2014/12/03/forum-math-emploi/">Forum Math Emploi</option>
+      
+      <option value="/news/2014/12/02/forum-math-emploi/">Cemosis@ForumMathEmploi</option>
+      
+      <option value="/news/2014/11/17/feelpp-webinar/">Anisotropic mesh adaptation and stabilized finite elements method for solving conjugate heat transfers and turbulent flows</option>
+      
+      <option value="/news/2014/11/03/feelpp-webinar-postprocessing/">Post-Processing Feel++ simulations</option>
+      
+      <option value="/news/2014/10/20/feelpp-webinar-dot/">Numerical method for time resolved diffuse optical tomography in Feel++</option>
+      
+      <option value="/news/2014/10/13/plastic-omnium/">Plastic Omnium</option>
+      
+      <option value="/news/2014/10/13/giovanna-guiboboni/">Bienvenue à Giovanna Guidoboni</option>
+      
+      <option value="/news/2014/10/13/chaire-gutenberg/">Giovanna Guidoboni, lauréate d’une Chaire Gutenberg</option>
+      
+      <option value="/news/2014/10/13/4000-coeurs-5-milliards-inconnues/">Jusqu'à 40 000 coeurs et 5 milliards d'inconnues !</option>
+      
+      <option value="/news/2014/10/06/feelpp-hifimagnet/">Feel++ Finite Element Framework Updates : Vectorial Finite Element \(H_{\mathrm{div}}\) - \(H_{\mathrm{curl}}\)</option>
+      
+      <option value="/news/2014/09/25/workshop-grasyas/">Gradient Systems and Applications workshop</option>
+      
+      <option value="/news/2014/09/25/workshop-gradient-system-applications/">Workshop "Gradient Systems and applications"</option>
+      
+      <option value="/news/2014/09/23/feelpp-webinar-hamm/">Domain decomposition methods, application to high performance computing</option>
+      
+      <option value="/news/2014/09/18/workshop-gradient-systems-and-applications/">Workshop "Gradient Systems and applications" - 25-26/09/14</option>
+      
+      <option value="/news/2014/09/07/feelpp-0-99-0-final-released/">Feel++ 0.99.0 Released</option>
+      
+      <option value="/news/2014/09/04/rapport-activite/">Rapport d'activité 2013 2014</option>
+      
+      <option value="/news/2014/09/01/ns2pp-starts/">NS2++ starts</option>
+      
+      <option value="/news/2014/09/01/feelpp-eye2brain-starts/">Eye2Brain starts</option>
+      
+      <option value="/news/2014/09/01/feelpp-5billions-unknowns/">HAMM/Mortar, about 5 billions unknowns on 40K cores using Feel++</option>
+      
+      <option value="/news/2014/05/28/feelpp-archlinux-port/">Feelpp available for Archlinux</option>
+      
+      <option value="/news/2014/05/26/feelpp-webinar-hamm/">Feel++ Webinar</option>
+      
+      <option value="/news/2014/05/26/10eme-semaine-etude-maths-entreprise/">10ème Semaine d'Étude Maths-Entreprises du 23 au 27 juin 2014</option>
+      
+      <option value="/news/2014/05/22/feelpp-0-98-0-final-released/">Feel++ 0.98.0 Released</option>
+      
+      <option value="/news/2014/05/05/feelpp-0-98-0-beta2-released/">Feel++ 0.98.0 Beta 2 Released</option>
+      
+      <option value="/news/2014/04/03/1000000-core-hours-at-fermi/">1,000,000 core hours for Feel++ at Fermi/Cineca</option>
+      
+      <option value="/news/2014/04/02/1000000-hours-Fermi/">1'000'000 heures de calculs attribuées sur Fermi à Cemosis</option>
+      
+      <option value="/news/2014/04/01/320000-hours/">320'000 heures de calcul attribuées à Cemosis sur le méso-centre de l'Université de Strasbourg.</option>
+      
+      <option value="/news/2014/03/25/rencontres-universite-entreprises/">Rencontres Universités Entreprises.</option>
+      
+      <option value="/news/2014/03/25/decouvrir-recherche-lyceens/">Une initiative pour faire découvrir la recherche à des lycéens</option>
+      
+      <option value="/news/2014/03/03/recontre-universite-entreprise/">Rencontres Universités Entreprises &#58; 20 et 21 mars 2014</option>
+      
+      <option value="/news/2014/03/03/3emes-journees-Feelpp/">Les 3èmes journées Feel++ du 19/2 au 21/2 2014</option>
+      
+      <option value="/news/2014/02/19/feelpp-fud3/">3rd Feel++ User Days</option>
+      
+      <option value="/news/2013/12/02/3e-forum-emploi-mathematiques/">3e Forum Emploi Mathématiques</option>
+      
+      <option value="/news/2013/10/14/nouveau-serveur-IRMA/">Un nouveau serveur de calcul scientifique à l'IRMA / A new server for scientific computation at IRMA</option>
+      
+      <option value="/news/2013/10/11/prix-meilleur-poster-doctorale/">Prix du meilleur poster de l'école doctorale - Ranine Tarabay</option>
+      
+      <option value="/news/2013/10/07/fete-science/">Fête de la science !</option>
+      
+      <option value="/news/2013/10/02/prix-mesochanllengs/">Prix Mésochallenges equip@meso</option>
+      
+      <option value="/news/2013/09/04/soutenances/">Soutenances</option>
+      
+      <option value="/news/2013/09/04/nouvel-arrivant/">Nouvel arrivant</option>
+      
+      <option value="/news/2013/06/19/seminar-ipb-tomographie-optique-diffuse/">Jeudi 20 juin 14h30 Séminaire IPB &#58; Tomographie optique diffuse (Lionel Hervé-CEA)</option>
+      
+      <option value="/news/2013/06/19/seminar-edp-mourad-ismail-rheologie-sanguine/">Jeudi 20 juin 11h Seminaire EDP &#58; Mourad Ismail (Liphy/Grenoble) sur la Rhéologie Sanguine</option>
+      
+      <option value="/news/2013/05/22/presentation-cemosis/">Présentation Cemosis&#58; CS Mésocentre 24 mai</option>
+      
+      <option value="/news/2013/05/21/xtra-dev/">Séminaire Xtra-dev&#58; Présentation de Cemosis le 23 mai 14h00 UFR Math-Info</option>
+      
+      <option value="/news/2013/05/21/seminar-xtra-dev/">Rencontre Xtra-dev&#58; Présentation de CeMoSiS le 23 mai à 14h à l'UFR Math-Info</option>
+      
+      <option value="/news/2013/04/06/seminar-technique-imagerie-tumeurs/">Une nouvelle technique d'imagerie au service de la détection de tumeurs</option>
+      
+      <option value="/news/2013/04/06/modeliser-ecoulement-sanguin/">Modéliser l’écoulement sanguin grâce au calcul haute performance dans L'Actu</option>
+      
+    </optgroup>
+  </select>
+</div>
+
+
+      <div class="unit four-fifths">
+        <article>
+  <h2>
+    Anisotropic mesh adaptation and stabilized finite elements method for solving conjugate heat transfers and turbulent flows
+    <a href="/news/2014/11/17/feelpp-webinar/" class="permalink" title="Permalink">∞</a>
+  </h2>
+  <span class="post-category">
+    <span class="label">
+      webinar
+    </span>
+  </span>
+  <div class="post-meta">
+    <span class="post-date">
+      17 Nov 2014
+    </span>
+    <a href="https://github.com/prudhomm" class="post-author">
+      <img src="https://github.com/prudhomm.png" class="avatar" alt="prudhomm" width="24" height="24">
+      
+      Christophe Prud'homme
+      
+    </a>
+  </div>
+  <div class="post-content">
+    <p>J. Veysset a new postdoctorate fellow who joined our team in november
+will present his work during his Phd on Monday 17 November 2014 via
+Hangout at 14h:</p>
+
+<p><em>Anisotropic mesh adaptation and stabilized finite elements method for solving conjugate heat transfers and turbulent flows</em></p>
+
+<p>Fluid-Structure Interaction (FSI) describes a wide variety of industrial problems arising in mechanical
+engineering, civil engineering and biomechanics. In spite of the available computer performance and the
+actual maturity of computational fluid dynamics and computational structural dynamics, several key
+issues still prevent accurate FSI simulations.</p>
+
+<p>Two main approaches for the simulation of FSI problems are still gaining attention lately: partitioned and
+monolithic approaches. Results in the literature show that the partitioned approach is accurate and
+efficient but some instabilities may occur depending on the ratio of the densities and the complexity of
+the geometry. Monolithic methods are still of interest due to their capability to treat the interaction of
+the fluid and the structure using a unified formulation. In fact it makes the buildup of a FSI problem
+easier as the mesh do not have to fit the geometry of the solids and the transfers are treated naturally.</p>
+
+<p>The software Thost has been created based on these analyzes. Thost is a 3D aerothermal numerical
+software. It has been developed for the numerical simulation of industrial processes like the heating in
+industrial furnaces as well as quenching. Its target is to model numerically the thermal history of the
+industrial pieces in their environment without using any transfer coefficient. However the computational
+costs are still high and therefore the software is not fully efficient from an industrial point of view to
+simulate, analyze and improve complex processes. All the work in this PhD thesis has been done to
+reduce the computational costs and optimize the accuracy of the simulations in Thost based on
+innovative numerical methods such as dynamic anisotropic mesh adaptation, stabilized finite elements
+methods and immersing the objects directly from their Computer Aided Design files.</p>
+
+<p>The <a href="https://plus.google.com/u/2/events/csh5s8cpli3kqoo8177h92asdb0">webinar</a> will be done using this
+<a href="https://plus.google.com/hangouts/_/event/csh5s8cpli3kqoo8177h92asdb0?authuser=2&amp;hl=fr">hangout</a>.</p>
+
+  </div>
+</article>
+
+      </div>
+
+      <!-- -*- mode: html -*- -->
+<div class="unit one-fifth hide-on-mobiles">
+  <aside>
+    <ul>
+      <li class="">
+        <a href="/news/">All News</a>
+      </li>
+      <li class="">
+        <a href="/news/projects/">Projects</a>
+      </li>
+      <li class="">
+        <a href="/news/releases/">Releases</a>
+      </li>
+      <li class="">
+        <a href="/news/workshops/">Workshops</a>
+      </li>
+      <li class="">
+        <a href="/news/webinars/">Webinars</a>
+      </li>
+    </ul>
+    <h4>Project News</h4>
+    <ul>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+    <h4>Recent Releases</h4>
+    <ul>
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/docs/develop/ChangeLog.html">History »</a>
+      </li>
+    </ul>
+    <h4>Recent Workshops</h4>
+    <ul>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li class="">
+        <a href="/news/2015/03/05/fud-4/">FUD4</a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+    <h4>Recent Webinars</h4>
+    <ul>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li class="current">
+        <a href="/news/2014/11/17/feelpp-webinar/">Feel++</a>
+      </li>
+      
+      
+      
+      <li class="">
+        <a href="/news/2014/11/03/feelpp-webinar-postprocessing/">Feel++</a>
+      </li>
+      
+      
+    </ul>
+  </aside>
+</div>
+
+
+      <div class="clear"></div>
+
+    </div>
+  </section>
+
+
+  <!-- footer.html  -->
+<footer>
+  <div class="grid">
+    <div class="unit one-third center-on-mobiles">
+      <p>The contents of this website are &copy;&nbsp;2015 the <a href="https://github.com/feelpp">Feel++ Consortium</a> under the terms of the <a href="https://github.com/feelpp/feelpp/blob/master/LICENSE">MIT&nbsp;License</a>.</p>
+    </div>
+    <div class="unit two-thirds align-right center-on-mobiles">
+      <p>
+        Hosted by
+        <a href="https://github.com">
+          <img src="/images/footer-logo.png" width="100" height="30" alt="GitHub • Social coding">
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+  
+  <!-- Google Analytics (http://google.com/analytics) -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-23513889-1', 'feelpp.org');
+    ga('send', 'pageview');
+
+  </script>
+
+
+
+</body>
+</html>

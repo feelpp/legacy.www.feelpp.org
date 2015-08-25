@@ -1,0 +1,69 @@
+<p>Dans ce projet nous nous intéressons à des méthodes de réduction d&#39;ordre pour des problèmes d&#39;aérothermie.</p>
+
+<p style="color:red">Problématique :</p>
+
+<p>Dans une soucis d&#39;optimiser les phases de design (étude de sensibilité, optimisation de paramètres, cas limites, ...), les industriels s&#39;intéressent de plus en plus à l&#39;utilisation de modèles aérothermiques efficaces et sûrs. Une utilisation massive de telles simulations permettrait, entre autre :</p>
+
+<ul>
+<li>une optimisation des coûts de production,</li>
+<li>une optimisation  des besoins énergétiques,</li>
+<li>une amélioration de la sécurité des systèmes.</li>
+</ul>
+
+<p><center>
+    <img src="/img/project/cabin.png" height="320" width="480">
+</center></p>
+
+<p>Le groupe Airbus, qui nous a fourni le cas test sur lequel nous travaillons, envisage de plus un couplage entre un tel modèle et un système de contrôle de l&#39;air climatisé dans le but d&#39;améliorer les dépenses énergétiques et le confort des passagers.  Il est pour cela indispensable d&#39;avoir une réponse en temps réel du modèle aérothermique.</p>
+
+<p>Une telle utilisation est cependant compliquée avec les modèles existants car la moindre simulation demande des ressources de calcul considérables.  Il est alors nécessaire de développer de nouveaux modèles, utilisant des méthodes de réduction d&#39;ordre. Dans notre cas, nous travaillons plus particulièrement à l&#39;utilisation de la méthode des bases réduites.</p>
+
+<p>Les équations qui nous intéressent (Navier-Stokes couplé à une équation d&#39;énergie ) sont non-linéaires et définissent un problème non-coercif ce qui entraine de nombreuses difficultés d&#39;abord dans la conception d&#39;un modèle éléments finis &quot;sûr&quot; mais aussi dans le développement d&#39;un estimateur d&#39;erreur précis pour la méthode des bases réduites. </p>
+
+<p style="color:red">Objectifs :</p>
+
+<ul>
+<li>Développement d&#39;un modèle éléments finis &quot;sûr&quot;</li>
+<li>Application de la méthode des bases réduites dans des cas simplifiés</li>
+<li>Développement d&#39;un estimateur d&#39;erreur précis pour le modèle de réduit</li>
+<li>Intégration d&#39;un modèle de turbulence dans le modèle réduit</li>
+<li>Couplage avec un système de contrôle</li>
+</ul>
+
+<p style="color:red">Premiers Travaux :</p>
+
+<p>Les première simulations ont été faites sur la partie haute de la cabine d&#39;avion ainsi que sur une géométrie &quot;plus simple&quot; de salle machine. Les simulations 3D devraient suivre prochainement.</p>
+
+<p><center>
+<h5>Ecoulement aerothermique dans une salle machine</h5>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YzUDiqiWa7E" frameborder="0" allowfullscreen></iframe>
+<h5>Ecoulement aérothermique dans une cabine d&#39;avion</h5>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X-V04S08Mwc" frameborder="0" allowfullscreen></iframe>
+</center></p>
+
+<p>Partenaires </p>
+
+<ul>
+<li>EADS-IW</li>
+<li>AICES (RWTH)</li>
+</ul>
+
+<p>Équipe</p>
+
+<ul>
+<li>Christophe Prud&#39;homme (IRMA, Cemosis)</li>
+<li>Yannick Hoarau (ICube)</li>
+<li>Karen Veroy (RWTH)</li>
+<li>Martin Grepl (RWTH)</li>
+<li>Vincent Huber (Cemosis)</li>
+<li>Jean-Baptiste Wahl (Master CSMI)</li>
+<li>Michel Fouquembergh (EADS)</li>
+</ul>
+
+<p>Contact </p>
+
+<ul>
+<li><a href="mailto:chorus@cemosis.fr">chorus@cemosis.fr</a></li>
+<li>C. Prud&#39;homme (<a href="mailto:christophe.prudhomme@cemosis.fr">christophe.prudhomme@cemosis.fr</a>)</li>
+<li>JB Wahl (<a href="mailto:wahl.jb@gmail.com">wahl.jb@gmail.com</a>)</li>
+</ul>

@@ -1,0 +1,322 @@
+<!-- -*- mode: html -*- -->
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Feel++ &bull; Finite Element Embedded Language and Library in C++</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="Feel++">
+  <link rel="alternate" type="application/rss+xml" title="Feel++ • Finite Element Embedded Library in C++ - Feed" href="/feed.xml">
+  <link rel="alternate" type="application/atom+xml" title="Recent commits to Feel's master branch" href="https://github.com/feelpp/feelpp/commits/master.atom">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
+  <link rel="stylesheet" href="/css/screen.css">
+  <link rel="stylesheet" href="/css/toc.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script type="text/javascript" charset="utf-8">
+var anchorForId = function(id){
+
+  var anchor = document.createElement("a");
+  anchor.className = "header-link";
+  anchor.href      = "#" + id;
+  anchor.innerHTML = '<i class="fa fa-link"></i>';
+  return anchor;
+}
+var linkifyAnchors = function(level, containingElement) {
+
+  var headers = containingElement.getElementsByTagName("h"+level);
+  for(var h=0; h<headers.length; h++){
+    var header = headers[h];
+
+    if( typeof(header.id) !== "undefined" && header.id !== "" )
+      header.appendChild(anchorForId(header.id));
+  }
+};
+document.onreadystatechange = function(){
+  if(this.readyState === "complete"){
+    var contentBlock = document.getElementsByClassName("docs")[0] || document.getElementsByClassName("news")[0]
+    for(var level=1; level<=6; level++)
+      linkifyAnchors(level, contentBlock);
+  }
+}
+</script>
+
+  <!--[if lt IE 9]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "TeX/autobold.js", "TeX/feelppmacros.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    });
+  </script><script src="http://vivabrain.u-strasbg.fr/mathjax/latest/MathJax.js"></script>
+
+</head>
+
+
+<body class="wrap">
+  <!-- header.html -->
+<header>
+  <nav class="mobile-nav show-on-mobiles">
+    <ul>
+  <li class="current">
+    <a href="/">Home</a>
+  </li>
+  <li class="">
+    <a href="https://github.com/feelpp/feelpp/releases">Download</a>
+  </li>
+  <li>
+    <a href="http://book.feelpp.org">User docs<!--<span class="show-on-mobiles">s</span><span class="hide-on-mobiles">umentation</span> --> </a> 
+  </li>
+  <li>
+    <a href="http://doc.feelpp.org">Dev docs</a>
+  </li>
+  <li class="">
+    <a href="/members/">Members</a>
+  </li>
+  <li class="">
+    <a href="/news/">News</a>
+  </li>
+  <li class="">
+    <a href="/publications//">Publications</a>
+  </li>
+  <li class="">
+    <a href="/community/">Community</a>
+  </li>
+  <li>
+    <a href="https://github.com/feelpp/feelpp">GitHub</a>
+  </li>
+</ul>
+
+  </nav>
+  <div class="grid">
+    <div class="unit two-thirds center-on-mobiles">
+    <p></p>
+    </div>
+    <div class="unit one-third  center-on-mobiles">
+    <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53700aec4f7aed98"></script>
+<!-- AddThis Button END -->
+</div>
+</div>
+<div class="grid">
+</div>
+    <!-- <div class="unit one-third center-on-mobiles"> -->
+    <!--   <h1> -->
+    <!--     <a href="/"> -->
+    <!--       <span>Feel++</span> -->
+    <!--       <\!--<img src="/images/feel.gif" width="249" height="115" alt="Logo">-\-> -->
+    <!--       <img src="/images/feel.gif" height="125" alt="Logo"> -->
+    <!--     </a> -->
+    <!--   </h1> -->
+    <!-- </div> -->
+    <nav class="main-nav unit whole hide-on-mobiles">
+      <ul>
+  <li class="current">
+    <a href="/">Home</a>
+  </li>
+  <li class="">
+    <a href="https://github.com/feelpp/feelpp/releases">Download</a>
+  </li>
+  <li>
+    <a href="http://book.feelpp.org">User docs<!--<span class="show-on-mobiles">s</span><span class="hide-on-mobiles">umentation</span> --> </a> 
+  </li>
+  <li>
+    <a href="http://doc.feelpp.org">Dev docs</a>
+  </li>
+  <li class="">
+    <a href="/members/">Members</a>
+  </li>
+  <li class="">
+    <a href="/news/">News</a>
+  </li>
+  <li class="">
+    <a href="/publications//">Publications</a>
+  </li>
+  <li class="">
+    <a href="/community/">Community</a>
+  </li>
+  <li>
+    <a href="https://github.com/feelpp/feelpp">GitHub</a>
+  </li>
+</ul>
+
+    </nav>
+  </div>
+</header>
+
+
+  <section class="intro">
+  <div class="grid">
+    <div class="unit whole center-on-mobiles">
+      <center><p class="first">Feel++</p></center>
+      <p class="first">Variational formulations in C++</p>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="grid">
+    <div class="unit one-third">
+      <h2>Versatile</h2>
+      <p>
+        A large range of numerical methods to solve partial differential
+        equations
+      </p>
+    </div>
+    <div class="unit one-third">
+      <h2>Powerful</h2>
+      <p>Support for high performance computing up to thousands of cores</p>
+    </div>
+    <div class="unit one-third">
+      <h2>Expressive</h2>
+      <p>
+	A language for variational formulations embedded into C++ for maximal
+	mathematical expressivity
+      </p>
+    </div>
+    <div class="clear"></div>
+</section>
+
+<section class="quickstart">
+    <div class="grid">
+      <div class="unit one-third center-on-mobiles">
+    <p class="note">4th Feel++ User Days between March 23 and March 25 in Strasbourg. More details
+      <a href="/news/2015/03/05/fud-4/">here</a></p>
+      </div>
+    <div class="unit two-thirds code">
+      <p class="title">Recent News</p>
+      <div class="summary">
+        <ul>
+        
+        <li>[interdisciplinary-bio-project] <a href="/news/2015/08/17/tomographie-optique/">Détection de tumeurs par Tomographie Optique Diffuse</a></li>
+        
+        <li>[interdisciplinary-bio-project] <a href="/news/2015/08/17/rheologie-sanguine/"></a></li>
+        
+        <li>[interdisciplinary-bio-project] <a href="/news/2015/08/17/planification-procedures-medicales/"></a></li>
+        
+        <li>[entreprise-project] <a href="/news/2015/08/17/ns2++/">Non Standard Navier-Stokes formulation in Feel++</a></li>
+        
+        <li>[interdisciplinary-physics-project] <a href="/news/2015/08/17/mhd/">Résolution des équations de la MHD sur architecture multicoeur</a></li>
+        
+        <li>[entreprise-project] <a href="/news/2015/08/17/maxwell/">Couplage équations de Maxwell / Méthode particulaire sur GPU</a></li>
+        
+        <li>[entreprise-project] <a href="/news/2015/08/17/holo3/">Corrélation d’images et X-FEM (eXtended Finite Element Method)</a></li>
+        
+        <li>[interdisciplinary-physics-project] <a href="/news/2015/08/17/hifimagnet/">Modélisation multi physique d'aimants à haut champ</a></li>
+        
+        </ul></div>
+    </div>
+    </div>
+</section>
+
+<section class="intro">
+<div class="grid">
+<div class="unit whole center-on-mobiles">
+    <p>Finite Element Embedded Library in C++</p>
+</div>
+</div>
+</section>
+<section id="features">
+<div class="grid">
+  <div class="unit whole center-on-mobiles">
+    <p>Feel++  is a C++ library for partial differential equation solves using
+    generalized Galerkin methods such as the finite element method, the h/p
+    finite element method, the spectral element method or the reduced basis
+    method.</p>
+
+    <p>Feel++ is currently used in various projects hosted by <a href="http://www.cemosis.fr">Cemosis</a>. This includes</p>
+    <ul>
+      <li>Fluid structure interaction with application to blood flows </li>
+      <li>High field magnets simulation</li>
+      <li>Optical tomography</li>
+      <li>Aerodynamics and aerothermal flows</li>
+      <li>Scalable preconditioners</li>
+    </ul>
+
+  </div>
+  </div>
+</section>
+
+<section class="quickstart">
+  <div class="grid">
+    <div class="unit whole code">
+      <p class="title">Quick-start Laplacian: Solve for \(-\Delta u = 1 \mbox{ in } \Omega=[0,1]^2, u = 0
+      \mbox{ on }\partial \Omega\)</p>
+      <div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cp">#include &lt;feel/feel.hpp&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span><span class="n">argv</span> <span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">using</span> <span class="k">namespace</span> <span class="n">Feel</span><span class="p">;</span>
+
+     <span class="n">Environment</span> <span class="n">env</span><span class="p">(</span> <span class="n">_argc</span><span class="o">=</span><span class="n">argc</span><span class="p">,</span> <span class="n">_argv</span><span class="o">=</span><span class="n">argv</span><span class="p">,</span>
+                      <span class="n">_about</span><span class="o">=</span><span class="n">about</span><span class="p">(</span><span class="n">_name</span><span class="o">=</span><span class="s">&quot;qs_laplacian&quot;</span><span class="p">,</span>
+                                   <span class="n">_author</span><span class="o">=</span><span class="s">&quot;Feel++ Consortium&quot;</span><span class="p">,</span>
+                                   <span class="n">_email</span><span class="o">=</span><span class="s">&quot;feelpp-devel@feelpp.org&quot;</span><span class="p">));</span>
+
+    <span class="k">auto</span> <span class="n">mesh</span> <span class="o">=</span> <span class="n">loadMesh</span><span class="p">(</span><span class="n">_mesh</span><span class="o">=</span><span class="k">new</span> <span class="n">Mesh</span><span class="o">&lt;</span><span class="n">Simplex</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;&gt;</span><span class="p">);</span>
+    <span class="k">auto</span> <span class="n">Vh</span> <span class="o">=</span> <span class="n">Pch</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">(</span> <span class="n">mesh</span> <span class="p">);</span>
+    <span class="k">auto</span> <span class="n">u</span> <span class="o">=</span> <span class="n">Vh</span><span class="o">-&gt;</span><span class="n">element</span><span class="p">();</span>
+    <span class="k">auto</span> <span class="n">v</span> <span class="o">=</span> <span class="n">Vh</span><span class="o">-&gt;</span><span class="n">element</span><span class="p">();</span>
+
+    <span class="k">auto</span> <span class="n">l</span> <span class="o">=</span> <span class="n">form1</span><span class="p">(</span> <span class="n">_test</span><span class="o">=</span><span class="n">Vh</span> <span class="p">);</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="n">integrate</span><span class="p">(</span><span class="n">_range</span><span class="o">=</span><span class="n">elements</span><span class="p">(</span><span class="n">mesh</span><span class="p">),</span>
+                  <span class="n">_expr</span><span class="o">=</span><span class="n">id</span><span class="p">(</span><span class="n">v</span><span class="p">));</span>
+
+    <span class="k">auto</span> <span class="n">a</span> <span class="o">=</span> <span class="n">form2</span><span class="p">(</span> <span class="n">_trial</span><span class="o">=</span><span class="n">Vh</span><span class="p">,</span> <span class="n">_test</span><span class="o">=</span><span class="n">Vh</span><span class="p">);</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">integrate</span><span class="p">(</span><span class="n">_range</span><span class="o">=</span><span class="n">elements</span><span class="p">(</span><span class="n">mesh</span><span class="p">),</span>
+                  <span class="n">_expr</span><span class="o">=</span><span class="n">gradt</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="o">*</span><span class="n">trans</span><span class="p">(</span><span class="n">grad</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="p">);</span>
+    <span class="n">a</span><span class="o">+=</span><span class="n">on</span><span class="p">(</span><span class="n">_range</span><span class="o">=</span><span class="n">boundaryfaces</span><span class="p">(</span><span class="n">mesh</span><span class="p">),</span> <span class="n">_rhs</span><span class="o">=</span><span class="n">l</span><span class="p">,</span> <span class="n">_element</span><span class="o">=</span><span class="n">u</span><span class="p">,</span> <span class="n">_expr</span><span class="o">=</span><span class="n">cst</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span> <span class="p">);</span>
+    <span class="n">a</span><span class="p">.</span><span class="n">solve</span><span class="p">(</span><span class="n">_rhs</span><span class="o">=</span><span class="n">l</span><span class="p">,</span><span class="n">_solution</span><span class="o">=</span><span class="n">u</span><span class="p">);</span>
+
+    <span class="k">auto</span> <span class="n">e</span> <span class="o">=</span> <span class="n">exporter</span><span class="p">(</span> <span class="n">_mesh</span><span class="o">=</span><span class="n">mesh</span> <span class="p">);</span>
+    <span class="n">e</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span> <span class="s">&quot;u&quot;</span><span class="p">,</span> <span class="n">u</span> <span class="p">);</span>
+    <span class="n">e</span><span class="o">-&gt;</span><span class="n">save</span><span class="p">();</span>
+<span class="p">}</span></code></pre></div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- footer.html  -->
+<footer>
+  <div class="grid">
+    <div class="unit one-third center-on-mobiles">
+      <p>The contents of this website are &copy;&nbsp;2015 the <a href="https://github.com/feelpp">Feel++ Consortium</a> under the terms of the <a href="https://github.com/feelpp/feelpp/blob/master/LICENSE">MIT&nbsp;License</a>.</p>
+    </div>
+    <div class="unit two-thirds align-right center-on-mobiles">
+      <p>
+        Hosted by
+        <a href="https://github.com">
+          <img src="/images/footer-logo.png" width="100" height="30" alt="GitHub • Social coding">
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+  
+  <!-- Google Analytics (http://google.com/analytics) -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-23513889-1', 'feelpp.org');
+    ga('send', 'pageview');
+
+  </script>
+
+
+
+</body>
+</html>

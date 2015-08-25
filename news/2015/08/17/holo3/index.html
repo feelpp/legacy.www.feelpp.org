@@ -1,0 +1,58 @@
+<p style="color:red">Thématique</p>
+
+<p>On s&#39;intéressera ici à la méthode permettant la corrélation d’image et les problèmes/solutions associés à ce principe.</p>
+
+<p style="color:red">Problématique</p>
+
+<p>La corrélation d’image (ou DIC : Digital Image Correlation ) permet, à partir de deux images distinctes f et g, respectivement l’image initiale et l’image après déformation, de pouvoir notamment calculer le déplacement associé. On s&#39;intéressera ici la méthode par éléments finis, c’est à dire par la résolution d’une équation aux dérivées partielles.
+Cependant, cette méthode rencontre quelques soucis lorsque la structure de l’objet pris en photo n’est pas uniforme et possède des imperfections, par exemple avec la présence de rayures ou fissures à la surface. Pour tenter de corriger cela, on s&#39;appuiera sur la méthode X-FEM .
+Holo3, un centre spécialisé dans le développement et la mise en oeuvre de techniques optiques et d’imagerie situé à Saint Louis (68), possède déjà de leur coté un logiciel, nommé Corelli permettant la réalisation de cette méthode.
+Le but est donc ici tout d’abord de reproduire la méthode permettant de calculer le champ de déplacements associé aux images par la méthode des éléments finis, et ce grâce à la bibliothèque Feel++. Une fois ceci réalisé et fonctionnel pour des structures standards , on cherchera à le pousser plus loin sur d’autres images aux structures moins régulières, par l’application de X-FEM.</p>
+
+<p style="color:red">Objectifs</p>
+
+<p>Réalisation d’une application permettant la corrélation d’images “simples”.
+Tests et observations sur différents cas.
+Intégration de X-FEM dans le code.</p>
+
+<p><center>
+<p><img src="/img/project/Capture d’écran 2015-02-23 à 10.17.29.png"></p></p>
+
+<p><img src="/img/project/Capture d’écran 2015-02-23 à 10.17.38.png"></p>
+
+<p style="color:#666666"><i>Images dont on cherche à calculer le champ de déplacement.
+( entre f, image initiale et g, image après déformation - Valeurs : niveau de gris )</i></p>
+
+<p></center></p>
+
+<p style="color:red">Thématique</p>
+
+<p>Reconstruction d’images à partir de données de pentes.
+Dans un premier temps le but de ce projet sera de permettre la reconstruction de surfaces à partir des pentes, en prenant en compte l’exclusion des zones bruités. 
+Ensuite d’évaluer les possibilités de reconstruction de surface par la méthode des éléments finis étendus sur des surfaces de rayures fines sans informations de pente.</p>
+
+<p style="color:red">Partenaires</p>
+
+<ul>
+<li>HOLO3
+
+<ul>
+<li>JAMINION Stéphanie</li>
+<li>DANIEAU Pierre</li>
+</ul></li>
+<li>UFR de Mathématiques et d’Informatique de Strasbourg
+
+<ul>
+<li>PRUD’HOMME Christophe (IRMA, Cemosis)</li>
+<li>LANTZ Thomas (Master CSMI)</li>
+<li>VANTHONG Benjamin (Master CSMI)</li>
+</ul></li>
+</ul>
+
+<p style="color:red">Contacts</p>
+
+<ul>
+<li>C. Prud&#39;homme (<a href="mailto:christophe.prudhomme@cemosis.fr">christophe.prudhomme@cemosis.fr</a>)</li>
+<li>B.Vanthong (<a href="mailto:benjamin.vanthong@gmail.com">benjamin.vanthong@gmail.com</a>)</li>
+<li>T. Lantz (<a href="mailto:lantz.thomas0@gmail.com">lantz.thomas0@gmail.com</a>)</li>
+</ul>
