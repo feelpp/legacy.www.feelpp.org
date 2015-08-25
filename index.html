@@ -1,0 +1,124 @@
+---
+layout: default
+title: Feel++ &bull; Finite Element Embedded Language and Library in C++
+overview: true
+---
+
+<section class="intro">
+  <div class="grid">
+    <div class="unit whole center-on-mobiles">
+      <center><p class="first">Feel++</p></center>
+      <p class="first">Variational formulations in C++</p>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="grid">
+    <div class="unit one-third">
+      <h2>Versatile</h2>
+      <p>
+        A large range of numerical methods to solve partial differential
+        equations
+      </p>
+    </div>
+    <div class="unit one-third">
+      <h2>Powerful</h2>
+      <p>Support for high performance computing up to thousands of cores</p>
+    </div>
+    <div class="unit one-third">
+      <h2>Expressive</h2>
+      <p>
+	A language for variational formulations embedded into C++ for maximal
+	mathematical expressivity
+      </p>
+    </div>
+    <div class="clear"></div>
+</section>
+
+<section class="quickstart">
+    <div class="grid">
+      <div class="unit one-third center-on-mobiles">
+    <p class="note">4th Feel++ User Days between March 23 and March 25 in Strasbourg. More details
+      <a href="{% post_url 2015-03-05-FUD_4.0 %}">here</a></p>
+      </div>
+    <div class="unit two-thirds code">
+      <p class="title">Recent News</p>
+      <div class="summary">
+        <ul>
+        {% for post in site.posts limit:8 %}
+        <li>[{{post.categories}}] <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul></div>
+    </div>
+    </div>
+</section>
+
+<section class="intro">
+<div class="grid">
+<div class="unit whole center-on-mobiles">
+    <p>Finite Element Embedded Library in C++</p>
+</div>
+</div>
+</section>
+<section id="features">
+<div class="grid">
+  <div class="unit whole center-on-mobiles">
+    <p>Feel++  is a C++ library for partial differential equation solves using
+    generalized Galerkin methods such as the finite element method, the h/p
+    finite element method, the spectral element method or the reduced basis
+    method.</p>
+
+    <p>Feel++ is currently used in various projects hosted by <a href="http://www.cemosis.fr">Cemosis</a>. This includes</p>
+    <ul>
+      <li>Fluid structure interaction with application to blood flows </li>
+      <li>High field magnets simulation</li>
+      <li>Optical tomography</li>
+      <li>Aerodynamics and aerothermal flows</li>
+      <li>Scalable preconditioners</li>
+    </ul>
+
+  </div>
+  </div>
+</section>
+
+<section class="quickstart">
+  <div class="grid">
+    <div class="unit whole code">
+      <p class="title">Quick-start Laplacian: Solve for \(-\Delta u = 1 \mbox{ in } \Omega=[0,1]^2, u = 0
+      \mbox{ on }\partial \Omega\)</p>
+      {% highlight C++ %}
+#include <feel/feel.hpp>
+
+int main(int argc, char**argv )
+{
+     using namespace Feel;
+
+     Environment env( _argc=argc, _argv=argv,
+                      _about=about(_name="qs_laplacian",
+                                   _author="Feel++ Consortium",
+                                   _email="feelpp-devel@feelpp.org"));
+
+    auto mesh = loadMesh(_mesh=new Mesh<Simplex<2>>);
+    auto Vh = Pch<2>( mesh );
+    auto u = Vh->element();
+    auto v = Vh->element();
+
+    auto l = form1( _test=Vh );
+    l = integrate(_range=elements(mesh),
+                  _expr=id(v));
+
+    auto a = form2( _trial=Vh, _test=Vh);
+    a = integrate(_range=elements(mesh),
+                  _expr=gradt(u)*trans(grad(v)) );
+    a+=on(_range=boundaryfaces(mesh), _rhs=l, _element=u, _expr=cst(0.) );
+    a.solve(_rhs=l,_solution=u);
+
+    auto e = exporter( _mesh=mesh );
+    e->add( "u", u );
+    e->save();
+}
+      {% endhighlight %}
+    </div>
+  </div>
+</section>

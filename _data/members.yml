@@ -1,0 +1,55 @@
+- name: Christophe Prudhomme
+  github: prudhomm
+  bio: Professor in Scientifc Computing
+  place: Strasbourg
+  projects: all 
+
+- name: Vincent Chabannes
+  github: vincentchabannes
+  bio: Research Engineer
+  place: Grenoble
+
+- name: Vincent Huber
+  github: vhuber
+  bio: Research Engineer
+  place: Strasbourg
+
+- name: Alexandre Ancel
+  github: aancel
+  bio: Research Engineer
+  place: Strasbourg
+
+- name: Christophe Trophime
+  github: Trophime
+  bio: Research Engineer
+  place: Grenoble
+  projects : HiFiMagnet
+
+- name: Marcela Szopos
+  github: mszopos
+  bio: Associate Professor
+  place: Strasbourg
+
+- name: Guillaume Dollé
+  github: gdolle
+  bio: PhD Student
+  place: Strasbourg
+  projects: DOT
+
+- name: Cécile Daversin
+  github: cdaversin
+  bio: PhD Student
+  place: Strasbourg, Grenoble
+  projects : HiFiMagnet
+  
+- name: Ranine Tarabay
+  github: ranine
+  bio: PhD Student
+  place: Strasbourg
+  projects: BloodFlow
+
+- name: JB Wahl
+  github: jbwahl
+  bio: PhD Student
+  place: Strasbourg
+  projects: Chorus

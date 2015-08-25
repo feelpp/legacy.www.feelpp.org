@@ -1,0 +1,10 @@
+---
+layout: news
+title: Projects
+permalink: /news/projects/
+author: all
+---
+
+{% for post in site.categories.project %}
+  {% include news_item.html %}
+{% endfor %}

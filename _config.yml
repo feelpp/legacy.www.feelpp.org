@@ -1,0 +1,24 @@
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+highlighter: pygments
+relative_permalinks: false
+permalink: /news/:year/:month/:day/:title/
+excerpt_separator: noifniof3nioaniof3nioafafinoafnoif
+repository: https://github.com/feelpp/feelpp
+help_url: 
+google_analytics_id: UA-23513889-1
+author:
+  orcid: 0000-0003-2287-2961
+scholar:
+  style: apa
+  locale: en
+
+  sort_by: none
+  order: ascending
+
+  source: ./_bibliography
+  bibliography: references.bib
+  bibliography_template: bib
+  
+  query: "@*"

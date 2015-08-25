@@ -1,0 +1,65 @@
+<!-- -*- mode: html -*- -->
+<div class="unit one-fifth hide-on-mobiles">
+  <aside>
+    <ul>
+      <li class="{% if page.title == 'News' %}current{% endif %}">
+        <a href="/news/">All News</a>
+      </li>
+      <li class="{% if page.title == 'Projects' %}current{% endif %}">
+        <a href="/news/projects/">Projects</a>
+      </li>
+      <li class="{% if page.title == 'Releases' %}current{% endif %}">
+        <a href="/news/releases/">Releases</a>
+      </li>
+      <li class="{% if page.title == 'Workshops' %}current{% endif %}">
+        <a href="/news/workshops/">Workshops</a>
+      </li>
+      <li class="{% if page.title == 'Webinars' %}current{% endif %}">
+        <a href="/news/webinars/">Webinars</a>
+      </li>
+    </ul>
+    <h4>Project News</h4>
+    <ul>
+      {% for post in site.posts limit:10 %}
+      {% if post.project %}
+      <li class="{% if page.title == post.title %}current{% endif %}">
+        <a href="{{ post.url }}">{{ post.project }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    <h4>Recent Releases</h4>
+    <ul>
+      {% for post in site.posts limit:3 %}
+      {% if post.version %}
+      <li class="{% if page.title == post.title %}current{% endif %}">
+        <a href="{{ post.url }}">Version {{ post.version }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+      <li>
+        <a href="/docs/develop/ChangeLog.html">History »</a>
+      </li>
+    </ul>
+    <h4>Recent Workshops</h4>
+    <ul>
+      {% for post in site.posts limit:30 %}
+      {% if post.workshop %}
+      <li class="{% if page.title == post.title %}current{% endif %}">
+        <a href="{{ post.url }}">{{ post.workshop }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    <h4>Recent Webinars</h4>
+    <ul>
+      {% for post in site.posts limit:30 %}
+      {% if post.webinar %}
+      <li class="{% if page.title == post.title %}current{% endif %}">
+        <a href="{{ post.url }}">{{ post.project }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </aside>
+</div>

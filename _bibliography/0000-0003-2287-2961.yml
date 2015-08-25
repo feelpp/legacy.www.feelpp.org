@@ -1,0 +1,414 @@
+---
+orcid: 0000-0003-2287-2961
+created_at: '2014-09-13T05:23:01+00:00'
+updated_at: '2015-04-20T21:16:51+00:00'
+biography: 
+given_names: Christophe
+family_name: Prud'homme
+references:
+- title: Scalable domain decomposition preconditioners for heterogeneous elliptic
+    problems
+  container-title: Scientific Programming
+  volume: '22'
+  issue: '2'
+  page: 157-171
+  author:
+  - family: Jolivet
+    given: P.
+  - family: Hecht
+    given: F.
+  - family: Nataf
+    given: F.
+  - family: Prud'Homme
+    given: C.
+  genre: article
+  DOI: 10.3233/SPR-140381
+  URL: http://dx.doi.org/10.3233/SPR-140381
+  id: jolivet2014a
+  type: ''
+  issued:
+    date-parts:
+    - - 2014
+- title: Scalable domain decomposition preconditioners for heterogeneous elliptic
+    problems
+  container-title: International Conference for High Performance Computing, Networking,
+    Storage and Analysis, SC
+  author:
+  - family: Jolivet
+    given: P.
+  - family: Hecht
+    given: F.
+  - family: Nataf
+    given: F.
+  - family: Prud'Homme
+    given: C.
+  genre: article
+  DOI: 10.1145/2503210.2503212
+  URL: http://dx.doi.org/10.1145/2503210.2503212
+  id: jolivet2013a
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
+- title: A domain-specific embedded language in C++ for lowest-order discretizations
+    of diffusive problems on general meshes
+  container-title: BIT Numerical Mathematics
+  volume: '53'
+  issue: '1'
+  page: 111-152
+  author:
+  - family: Di Pietro
+    given: D.A.
+  - family: Gratien
+    given: J.-M.
+  - family: Prud'homme
+    given: Christophe
+  genre: article
+  DOI: 10.1007/s10543-012-0403-3
+  URL: http://dx.doi.org/10.1007/s10543-012-0403-3
+  id: di2013a
+  type: ''
+  issued:
+    date-parts:
+    - - 2013
+- title: Simulation of two-fluid flows using a finite element/level set method. Application
+    to bubbles and vesicle dynamics
+  container-title: Journal of Computational and Applied Mathematics
+  author:
+  - family: Doyeux
+    given: V.
+  - family: Guyot
+    given: Y.
+  - family: Chabannes
+    given: V.
+  - family: Prud'homme
+    given: Christophe
+  - family: Ismail
+    given: M.
+  genre: article
+  DOI: 10.1016/j.cam.2012.05.004
+  URL: http://dx.doi.org/10.1016/j.cam.2012.05.004
+  id: doyeux2012a
+  type: ''
+  issued:
+    date-parts:
+    - - 2012
+- title: High-order fluid-structure interaction in 2D and 3D application to blood
+    flow in arteries
+  container-title: Journal of Computational and Applied Mathematics
+  author:
+  - family: Chabannes
+    given: V.
+  - family: Pena
+    given: G.
+  - family: Prud'homme
+    given: Christophe
+  genre: article
+  DOI: 10.1016/j.cam.2012.10.006
+  URL: http://dx.doi.org/10.1016/j.cam.2012.10.006
+  id: chabannes2012a
+  type: ''
+  issued:
+    date-parts:
+    - - 2012
+- title: High performance domain decomposition methods on massively parallel architectures
+    with freefem+
+  container-title: Journal of Numerical Mathematics
+  volume: '20'
+  issue: 3-4
+  page: 287-302
+  author:
+  - family: Jolivet
+    given: P.
+  - family: Dolean
+    given: V.
+  - family: Hecht
+    given: F.
+  - family: Nataf
+    given: F.
+  - family: Prud'homme
+    given: Christophe
+  - family: Spillane
+    given: N.
+  genre: article
+  DOI: 10.1515/jnum-2012-0015
+  URL: http://dx.doi.org/10.1515/jnum-2012-0015
+  id: jolivet2012a
+  type: ''
+  issued:
+    date-parts:
+    - - 2012
+- title: High order methods for the approximation of the incompressible Navier-Stokes
+    equations in a moving domain
+  container-title: Computer Methods in Applied Mechanics and Engineering
+  volume: 209-212
+  page: 197-211
+  author:
+  - family: Pena
+    given: G.
+  - family: Prud'homme
+    given: Christophe
+  - family: Quarteroni
+    given: A.
+  genre: article
+  DOI: 10.1016/j.cma.2011.09.016
+  URL: http://dx.doi.org/10.1016/j.cma.2011.09.016
+  id: pena2012a
+  type: ''
+  issued:
+    date-parts:
+    - - 2012
+- title: ! 'Advances in FEEL++ : A domain specific embedded language in C++ for partial
+    differential equations'
+  container-title: ECCOMAS 2012 - European Congress on Computational Methods in Applied
+    Sciences and Engineering, e-Book Full Papers
+  page: 6958-6976
+  author:
+  - family: Prud'homme
+    given: Christophe
+  - family: Chabannes
+    given: V.
+  - family: Doyeux
+    given: V.
+  - family: Ismail
+    given: M.
+  - family: Samake
+    given: A.
+  - family: Pena
+    given: G.
+  - family: Daversin
+    given: C.
+  - family: Trophime
+    given: C.
+  genre: article
+  id: prud2012a
+  type: ''
+  issued:
+    date-parts:
+    - - 2012
+- title: A priori convergence of the Greedy algorithm for the parametrized reduced
+    basis method
+  container-title: ! 'ESAIM: Mathematical Modelling and Numerical Analysis'
+  volume: '46'
+  issue: '3'
+  page: 595-603
+  author:
+  - family: Buffa
+    given: A.
+  - family: Maday
+    given: Y.
+  - family: Patera
+    given: A.T.
+  - family: Prud'Homme
+    given: C.
+  - family: Turinici
+    given: G.
+  genre: article
+  DOI: 10.1051/m2an/2011056
+  URL: http://dx.doi.org/10.1051/m2an/2011056
+  id: buffa2012a
+  type: ''
+  issued:
+    date-parts:
+    - - 2012
+- title: Construction of a high order fluidstructure interaction solver
+  container-title: Journal of Computational and Applied Mathematics
+  volume: '234'
+  issue: '7'
+  page: 2358-2365
+  author:
+  - family: Prud'Homme
+    given: C.
+  - family: Pena
+    given: G.
+  genre: article
+  DOI: 10.1016/j.cam.2009.08.093
+  URL: http://dx.doi.org/10.1016/j.cam.2009.08.093
+  id: prud2010a
+  type: ''
+  issued:
+    date-parts:
+    - - 2010
+- title: Basic concepts to design a DSL for parallel finite volume applications
+  container-title: Proceedings of the 8th Workshop on Parallel/High-Performance Object-Oriented
+    Scientific Computing, POOSC '09
+  author:
+  - family: Di Pietro
+    given: D.A.
+  - family: Gratien
+    given: J.-M.
+  - family: Häberlein
+    given: F.
+  - family: Michel
+    given: A.
+  - family: Prud'homme
+    given: Christophe
+  genre: article
+  DOI: 10.1145/1595655.1595658
+  URL: http://dx.doi.org/10.1145/1595655.1595658
+  id: di2009a
+  type: ''
+  issued:
+    date-parts:
+    - - 2009
+- title: ! 'Life: Overview of a unified C++ implementation of the finite and spectral
+    element methods in 1D, 2D and 3D'
+  container-title: Lecture Notes in Computer Science (including subseries Lecture
+    Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)
+  volume: 4699 LNCS
+  page: 712-721
+  author:
+  - family: Prud'homme
+    given: Christophe
+  genre: article
+  id: prud2007a
+  type: ''
+  issued:
+    date-parts:
+    - - 2007
+- title: A domain specific embedded language in C++ for automatic differentiation,
+    projection, integration and variational formulations
+  container-title: Scientific Programming
+  volume: '14'
+  issue: '2'
+  page: 81-110
+  author:
+  - family: Prud'homme
+    given: Christophe
+  genre: article
+  id: prud2006a
+  type: ''
+  issued:
+    date-parts:
+    - - 2006
+- title: Reduced-basis output bounds for approximately parametrized elliptic coercive
+    partial differential equations
+  container-title: Computing and Visualization in Science
+  volume: '6'
+  issue: 2-3
+  page: 147-162
+  author:
+  - family: Prud'homme
+    given: Christophe
+  - family: Patera
+    given: A.T.
+  genre: article
+  DOI: 10.1007/s00791-003-0119-7
+  URL: http://dx.doi.org/10.1007/s00791-003-0119-7
+  id: prud2004a
+  type: ''
+  issued:
+    date-parts:
+    - - 2004
+- title: ! 'Reduced-basis approximation of the viscous Burgers equation: Rigorous
+    a posteriori error bounds | Approximation par base réduite de l''équation de Burgers
+    visqueuse: Bornes d''erreur a posteriori rigoureuses'
+  container-title: Comptes Rendus Mathematique
+  volume: '337'
+  issue: '9'
+  page: 619-624
+  author:
+  - family: Veroy
+    given: K.
+  - family: Prud'homme
+    given: Christophe
+  - family: Patera
+    given: A.T.
+  genre: article
+  DOI: 10.1016/j.crma.2003.09.023
+  URL: http://dx.doi.org/10.1016/j.crma.2003.09.023
+  id: veroy2003a
+  type: ''
+  issued:
+    date-parts:
+    - - 2003
+- title: A posteriori error bounds for reduced-basis approximation of parametrized
+    noncoercive and nonlinear elliptic partial differential equations
+  container-title: 16th AIAA Computational Fluid Dynamics Conference
+  author:
+  - family: Veroy
+    given: K.
+  - family: Prud'Homme
+    given: C.
+  - family: Rovas
+    given: D.V.
+  - family: Patera
+    given: A.T.
+  genre: article
+  id: veroy2003b
+  type: ''
+  issued:
+    date-parts:
+    - - 2003
+- title: ! 'Reliable real-time solution of parametrized partial differential equations:
+    Reduced-basis output bound methods'
+  container-title: Journal of Fluids Engineering, Transactions of the ASME
+  volume: '124'
+  issue: '1'
+  page: 70-80
+  author:
+  - family: Prud'homme
+    given: Christophe
+  - family: Rovas
+    given: D.V.
+  - family: Veroy
+    given: K.
+  - family: Machiels
+    given: L.
+  - family: Maday
+    given: Y.
+  - family: Patera
+    given: A.T.
+  - family: Turinici
+    given: G.
+  genre: article
+  DOI: 10.1115/1.1448332
+  URL: http://dx.doi.org/10.1115/1.1448332
+  id: prud2002a
+  type: ''
+  issued:
+    date-parts:
+    - - 2002
+- title: A mathematical and computational framework for reliable real-time solution
+    of parametrized partial differential equations
+  container-title: Mathematical Modelling and Numerical Analysis
+  volume: '36'
+  issue: '5'
+  page: 747-771
+  author:
+  - family: Prud'homme
+    given: Christophe
+  - family: Rovas
+    given: D.V.
+  - family: Veroy
+    given: K.
+  - family: Patera
+    given: A.T.
+  genre: article
+  DOI: 10.1051/m2an:2002035
+  URL: http://dx.doi.org/10.1051/m2an:2002035
+  id: prud2002b
+  type: ''
+  issued:
+    date-parts:
+    - - 2002
+- title: On a parallel implementation of the mortar element method
+  container-title: Mathematical Modelling and Numerical Analysis
+  volume: '33'
+  issue: '2'
+  page: 245-259
+  author:
+  - family: Abdoulaev
+    given: G.S.
+  - family: Achdou
+    given: Y.
+  - family: Kuznetsov
+    given: Y.A.
+  - family: Prud'homme
+    given: Christophe
+  genre: article
+  id: abdoulaev1999a
+  type: ''
+  issued:
+    date-parts:
+    - - 1999

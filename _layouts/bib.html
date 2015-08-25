@@ -1,0 +1,11 @@
+---
+---
+{{ reference }}
+
+{% if entry.url %}
+<a href="{{ entry.url }}">PDF</a>
+{% endif %}
+
+{% if entry.abstract %}
+<p class="note">{{ entry.abstract }}</p>
+{% endif %}
