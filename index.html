@@ -46,7 +46,7 @@ overview: true
       <p class="title">Recent News</p>
       <div class="summary">
         <ul>
-        {% for post in site.posts limit:8 %}
+        {% for post in site.tags.feelpp limit:8 %}
         <li>[{{post.categories}}] <a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
         </ul></div>

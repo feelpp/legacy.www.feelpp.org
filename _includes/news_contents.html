@@ -20,7 +20,7 @@
     </ul>
     <h4>Project News</h4>
     <ul>
-      {% for post in site.posts limit:10 %}
+      {% for post in site.tags.feelpp limit:10 %}
       {% if post.project %}
       <li class="{% if page.title == post.title %}current{% endif %}">
         <a href="{{ post.url }}">{{ post.project }}</a>
@@ -30,7 +30,7 @@
     </ul>
     <h4>Recent Releases</h4>
     <ul>
-      {% for post in site.posts limit:3 %}
+      {% for post in site.tags.feelpp limit:3 %}
       {% if post.version %}
       <li class="{% if page.title == post.title %}current{% endif %}">
         <a href="{{ post.url }}">Version {{ post.version }}</a>
@@ -43,7 +43,7 @@
     </ul>
     <h4>Recent Workshops</h4>
     <ul>
-      {% for post in site.posts limit:30 %}
+      {% for post in site.tags.feelpp limit:30 %}
       {% if post.workshop %}
       <li class="{% if page.title == post.title %}current{% endif %}">
         <a href="{{ post.url }}">{{ post.workshop }}</a>
@@ -53,7 +53,7 @@
     </ul>
     <h4>Recent Webinars</h4>
     <ul>
-      {% for post in site.posts limit:30 %}
+      {% for post in site.tags.feelpp limit:30 %}
       {% if post.webinar %}
       <li class="{% if page.title == post.title %}current{% endif %}">
         <a href="{{ post.url }}">{{ post.project }}</a>
