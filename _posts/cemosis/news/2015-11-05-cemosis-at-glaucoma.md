@@ -5,7 +5,7 @@ date: 2015-10-29
 author: vhuber
 fullname: Vincent HUBER
 categories: [news]
-tags: [cemosis,feelpp]
+tags: [cemosis,feelpp,angiotk,vivabrain,eye2brain]
 ---
 
 Cemosis was at the [International Congress of Advanced Technologies and Glaucoma Treatments](http://www.glaucomacongress.com/).

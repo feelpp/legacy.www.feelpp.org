@@ -1,6 +1,7 @@
 ---
 layout: project_item
 name: HiFiMagnet
+project: hifimagnet
 title: Modélisation multi physique d'aimants à haut champ
 date: 2015-08-17
 author:

@@ -5,7 +5,7 @@ date: 2015-11-05
 author: vhuber
 fullname: Vincent HUBER
 categories: [news]
-tags: [cemosis,feelpp]
+tags: [cemosis,feelpp,angiotk,vivabrain,eye2brain]
 project: [angiotk]
 ---
 

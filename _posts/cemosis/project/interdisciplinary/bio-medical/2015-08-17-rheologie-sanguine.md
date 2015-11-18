@@ -1,6 +1,7 @@
 ---
 layout: project_item
 name: Rhéologie Sanguine
+project: vivabrain
 title:
 date: 2015-08-17
 author:
