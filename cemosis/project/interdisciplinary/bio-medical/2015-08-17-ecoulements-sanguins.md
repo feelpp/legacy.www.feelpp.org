@@ -1,6 +1,7 @@
 ---
 layout: project_item
 name: Écoulements Sanguins
+project: vivabrain
 title: "De l'IRM réelle à l'IRM virtuelle : modéliser les flux sanguins dans le cerveau humain"
 date: 2015-08-17
 author:
