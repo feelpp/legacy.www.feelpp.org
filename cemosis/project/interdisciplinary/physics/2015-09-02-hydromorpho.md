@@ -1,6 +1,7 @@
 ---
 layout: project_item
 name: HydroMorpho
+project: hydromorpho
 title: Modélisation des transports de sédiments en fonds marins.
 date: 2015-09-02
 author:
