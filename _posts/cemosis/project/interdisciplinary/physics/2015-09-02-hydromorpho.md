@@ -4,7 +4,7 @@ name: HydroMorpho
 project: hydromorpho
 title: Modélisation des transports de sédiments en fonds marins.
 date: 2015-09-02
-author:
+author: Romain Hild
 fullname:
 categories: [interdisciplinary-physics-project]
 tags: [cemosis-project]
@@ -27,7 +27,7 @@ Collaborations :
 - [Université Bretagne-Sud](http://www.univ-ubs.fr)
 - [LEMON-INRIA](https://team.inria.fr/lemon)
 - [Université de Reims](http://www.univ-reims.fr)
-- [IRMA - Université de Strasbourg](http://www-irma.u-strasbg.fr)
+- [Cemosis/IRMA - Université de Strasbourg](http://www-irma.u-strasbg.fr)
 - [LJLL - Université Pierre et Marie Curie](https://www.ljll.math.upmc.fr/fr/presentation.html)
 - [Université de Lorraine](http://www.univ-lorraine.fr)
 - [Faculté des Sciences et Techniques de Tanger](http://www.fstt.ac.ma/Portail/index.php)
@@ -35,7 +35,7 @@ Collaborations :
 Contacts :
 
 - Emmanuel Frenod (emmanuel.frenod@see-d.fr)
-- Christophe Prud'homme (prudhomme@unistra.fr)
+- Christophe Prud'homme (christophe.prudhomme@cemosis.fr)
 - Antoine Rousseau (antoine.rousseau@inria.fr)
 - Stephanie Salmon (stephanie.salmon@univ-reims.fr)
 
