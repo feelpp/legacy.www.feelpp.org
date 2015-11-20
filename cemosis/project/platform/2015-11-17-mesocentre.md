@@ -19,10 +19,8 @@ collaborator: Cemosis
 </center>
 
 <div class="row-fluid">
-<div class="col-md-8">
-<div class="media">
-
-  <div class="media-body">
+<div class="col-md-6">
+<div class="media-body">
 
 #### Description
 
@@ -47,10 +45,18 @@ dont Cemosis est partenaire.
 </center>
 
 </div>
-<div class="media-right media-middle">
-<a href="#">
-<img class="media object" src="/img/project/platforms/mesocentre.png">
-</a>
 </div>
+
+<div class="col-md-6">
+<center>
+<a href="https://hpc.unistra.fr/">
+<img class="img-responsive" src="/img/project/platforms/mesocentre.png">
+</a>
+   
+<br />
+   
+Crédit photo : Catherine Schröder / Université de Strasbourg
+
+</center>
 </div>
 </div>
