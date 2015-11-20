@@ -1,6 +1,6 @@
 ---
 layout: news_item
-title: Un Zoom sur Cemosis par AMIES: Cemosis bientôt 3 ans et une activité débordante
+title: "Un Zoom sur Cemosis par AMIES: Cemosis bientôt 3 ans et une activité débordante"
 date: 2015-11-19
 author: prudhomm
 fullname: Christophe Prud'homme
