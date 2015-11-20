@@ -9,4 +9,4 @@ tags: [cemosis,feelpp,angiotk,vivabrain,eye2brain]
 project: [angiotk]
 ---
 
-Pr. Christophe Prud'homme will participate at the biomedical mini workshop in the [Simula Research Laboratory](www.simula.no) in Oslo on Decembre, 3 to speak about the [AngioTK](http://www.cemosis.fr/interdisciplinary-bio-project/2015/09/01/angiotk/) platform and the [biomedical applications](http://www.cemosis.fr/project_/interdisciplinary/) around [Feel++](www.feelpp.org).
+Pr. Christophe Prud'homme will participate at the biomedical mini workshop in the [Simula Research Laboratory](http://www.simula.no) in Oslo on Decembre, 3 to speak about the [AngioTK](http://www.cemosis.fr/interdisciplinary-bio-project/2015/09/01/angiotk/) platform and the [biomedical applications](http://www.cemosis.fr/project_/interdisciplinary/) around [Feel++](http://www.feelpp.org).
