@@ -6,7 +6,7 @@ title: Modélisation des transports de sédiments en fonds marins.
 date: 2015-09-02
 author: Romain Hild
 fullname:
-categories: [interdisciplinary-physics-project]
+categories: [interdisciplinary-env-project]
 tags: [cemosis-project]
 abstract: Le but de HydroMorpho est de simuler le transports de sédiments en fonds marins en couplant Navier-Stokes et Exner.
 img: /img/project/hydro.png
