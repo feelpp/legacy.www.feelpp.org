@@ -8,7 +8,7 @@ author:
 fullname:
 categories: [formation]
 tags: []
-logo: /img/logos/software.png
+logo: /img/logos/group.png
 collaborator: Cemosis
 ---
 
