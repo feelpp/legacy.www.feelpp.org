@@ -39,9 +39,6 @@ L'objectif du projet HiFiMagnet est le développement d'une gamme de modèles 3D
 - des méthodes de réduction d'ordre (méthode des bases réduites) pour réaliser études paramétriques et analyses de sensibilité à moindre coût
 
 
-<div style="clear:left"></div>
-
-J. Nadarasa a soutenu son stage de Master 2 sur ce sujet (Coupled modeling and simulation of electromagnets in stationary and instationary modes (axisymmetric and 3D) ) ce 22/08/2013.
 
 <p style="color:#666666;"><i>Image : Comportement de la température dans un hélice radiale en fonctionnement (modèle electrothermique couplé non linéaire).</i></p>
 
@@ -51,3 +48,12 @@ J. Nadarasa a soutenu son stage de Master 2 sur ce sujet (Coupled modeling and s
 - C.Trophime (christophe.trophime@lncmi.cnrs.fr),
 - C. Daversin (daversin@math.unistra.fr)
 - R. Hild (romain.hild@unistra.fr)
+
+<!-- <div style="clear:left"></div>
+
+J. Nadarasa a soutenu son stage de Master 2 sur ce sujet (Coupled modeling and simulation of electromagnets in stationary and instationary modes (axisymmetric and 3D) ) ce 22/08/2013. -->
+
+<h5>Brochure :</h5>
+<center>
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="//d2pjrbs8oo6puz.cloudfront.net/90f6eb9c-743b-49a7-a2ae-c6ff78da48ef/embedControls.html" id="SVEx43mzRhN2"></iframe></div>
+</center>
