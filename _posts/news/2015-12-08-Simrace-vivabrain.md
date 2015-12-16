@@ -1,7 +1,7 @@
 ---
 layout: news_item
 title: Cemosis @ SimRace 2015 -  Numerical methods and high performance computing for industrial fluid flows
-date: 2015-11-05
+date: 2015-12-08
 author: vhuber
 fullname: Vincent HUBER
 categories: [news]
