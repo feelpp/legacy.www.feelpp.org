@@ -1,7 +1,7 @@
 ---
 layout: news_item
 title: Cemosis @ a biomedical workshop at Simula in Oslo
-date: 2015-11-05
+date: 2015-12-03
 author: vhuber
 fullname: Vincent HUBER
 categories: [news]
