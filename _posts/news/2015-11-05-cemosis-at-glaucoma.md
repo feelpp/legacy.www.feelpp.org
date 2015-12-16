@@ -1,7 +1,7 @@
 ---
 layout: news_item
 title: Cemosis @ the International Congress of Advanced Technologies and Glaucoma Treatments
-date: 2015-10-29
+date: 2015-11-05
 author: vhuber
 fullname: Vincent HUBER
 categories: [news]
