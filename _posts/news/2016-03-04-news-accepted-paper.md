@@ -1,6 +1,6 @@
 ---
 layout: news_item
-title: Nouvel article - interpolation empirique et bases réduites pour les problèmes non linéaires
+title: Nouvel article - Une méthode EIM bases réduites simultanée pour les équations aux dérivées partielles non linéaires et non affines
 date: 2016-03-04
 author: vhuber
 fullname: Vincent HUBER
